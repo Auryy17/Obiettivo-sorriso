@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servizi - Obiettivo: sorriso!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Servizi</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="servizi.html">Servizi</a></li>
+                <li><a href="contatti.html">Contatti</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sezione dei Servizi con Scorrimento Orizzontale -->
+    <section id="servizi">
+        <div class="servizi-container">
+            <!-- Servizio Matrimonio -->
+            <div class="servizio" onclick="window.location.href='matrimonio.html'">
+                <img src="images/foto1.jpg" alt="Foto Matrimonio">
+                <p>Fotografie modificate</p>
+                <p>50€</p>
+            </div>
+            <!-- Servizio Video Matrimonio -->
+            <div class="servizio" onclick="window.location.href='video-matrimonio.html'">
+                <img src="images/foto2.jpg" alt="Video Matrimonio">
+                <p>Foto per calendari</p>
+                <p>35€</p>
+            </div>
+            <!-- Servizio Montaggio Video -->
+            <div class="servizio" onclick="window.location.href='montaggio-video.html'">
+                <img src="images/foto4.jpg" alt="Montaggio Video">
+                <p>Foto ad eventi</p>
+                <p>60€</p>
+            </div>
+            <!-- Servizio Foto Cerimonie -->
+            <div class="servizio" onclick="window.location.href='foto-cerimonie.html'">
+                <img src="images/foto3.jpg" alt="Foto Cerimonie">
+                <p>Foto per i <br>tuoi profili social</p>
+                <p>30€</p>
+            </div>
+            <!-- Servizio Video Cerimonie -->
+            <div class="servizio" onclick="window.location.href='video-cerimonie.html'">
+                <img src="images/foto-matrimonio.jpg" alt="Video Cerimonie">
+                <p>Foto a momenti<br>speciali</p>
+                <p>40€</p>
+            </div>
+            <!-- Servizio Shooting -->
+            <div class="servizio" onclick="window.location.href='shooting.html'">
+                <img src="images/sfilata.jpg" alt="Shooting">
+                <p>Shooting</p>
+                <p>40€</p>
+            </div>
+           
+        </div>
+    </section>
+	
+	<section id="quiz-servizi">
+    <h2>Qual è il servizio perfetto per te?</h2>
+    <form id="quiz-form">
+        <label>Che tipo di ricordo vuoi creare?</label><br>
+        <select name="tipo">
+            <option value="evento">Un evento speciale</option>
+            <option value="calendario">Un regalo originale</option>
+            <option value="social">Un profilo social curato</option>
+        </select><br><br>
+
+        <label>Quanto tempo vuoi investire?</label><br>
+        <select name="tempo">
+            <option value="poco">1 ora</option>
+            <option value="medio">2-3 ore</option>
+            <option value="tanto">Tutta la giornata</option>
+        </select><br><br>
+
+        <button type="submit">Scopri il servizio</button>
+    </form>
+
+    <div id="risultato-servizio" style="margin-top: 20px;"></div>
+</section>
+<script>
+    document.getElementById("quiz-form").addEventListener("submit", function(e) {
+        e.preventDefault();
+        const tipo = this.tipo.value;
+        const tempo = this.tempo.value;
+        let risultato = "";
+
+        if (tipo === "evento" && tempo !== "poco") {
+            risultato = "Ti consigliamo il servizio: <strong>Foto ad eventi</strong>!";
+        } else if (tipo === "calendario") {
+            risultato = "Ti consigliamo il servizio: <strong>Foto per calendari</strong>!";
+        } else if (tipo === "social") {
+            risultato = "Perfetto per te: <strong>Foto per i tuoi profili social</strong>!";
+        } else {
+            risultato = "Dai un'occhiata a tutti i nostri <a href='servizi.html'>servizi</a>!";
+        }
+
+        document.getElementById("risultato-servizio").innerHTML = risultato;
+    });
+</script>	
+	
+	
+<section id="configuratore-servizio">
+    <h2>Personalizza il tuo servizio!</h2>
+    <form id="config-form">
+        <label>Scegli tipo di servizio:</label>
+        <select id="tipo-servizio">
+            <option value="50">Fotografie modificate - 50€</option>
+            <option value="35">Foto per calendari - 35€</option>
+            <option value="40">Shooting - 40€</option>
+			 <option value="60">Foto ad eventi - 60€</option>
+			  <option value="30">Foto per i tuoi profili social - 30€</option>
+			   <option value="40">Foto a momenti speciali - 40€</option>
+        </select><br><br>
+
+        <label>I vestiti te li prestiamo noi? (+15€)</label>
+        <input type="checkbox" id="extra"><br><br>
+		
+
+        <p><strong>Prezzo totale: <span id="totale">0</span>€</strong></p> 
+    </form>
+</section>
+<script>
+    const tipoServizio = document.getElementById("tipo-servizio");
+    const extra = document.getElementById("extra");
+    const totale = document.getElementById("totale");
+
+    function calcolaTotale() {
+        let prezzo = parseInt(tipoServizio.value);
+        if (extra.checked) prezzo += 15;
+        totale.textContent = prezzo;
+    }
+
+
+    tipoServizio.addEventListener("change", calcolaTotale);
+    extra.addEventListener("change", calcolaTotale);
+    calcolaTotale();
+</script> 
+
+    <footer>
+        <p>&copy; 2025 Obiettivo: sorriso! | Crevalcore, Bologna</p>
+        <p>Telefono: +39 339 411 2687</p>
+    </footer>

@@ -1,0 +1,287 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-image: url('images/sfondo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#servizio-matrimonio {
+    text-align: center;
+    margin: 40px 0;
+    padding: 20px;
+    background-color: transparent; /* Rimuovi il background bianco per la prima sezione */
+}
+
+#servizio-matrimonio img {
+    width: 80%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.descrizione {
+    background-color: rgba(255, 255, 255, 0.9); /* Sfondo bianco per la descrizione */
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#servizio-matrimonio p {
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Sfondo bianco per le altre sezioni */
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+#map {
+    width: 100%;
+    height: 300px;
+    border: 1px solid #ccc;
+}
+
+.servizio-img {
+    width: 80%;  /* Imposta la larghezza dell'immagine al 80% della larghezza del contenitore */
+    max-width: 600px;  /* Imposta una larghezza massima per evitare che l'immagine sia troppo larga */
+    height: auto;  /* Mantiene la proporzione dell'immagine */
+    border-radius: 10px;  /* Aggiunge angoli arrotondati per un aspetto più elegante */
+    margin-top: 20px;
+}
+.sfilate-container {
+    display: flex;  /* Usa Flexbox per disporre immagine e testo orizzontalmente */
+    justify-content: space-between;  /* Distanza tra l'immagine e il testo */
+    align-items: center;  /* Allinea verticalmente l'immagine e il testo */
+    margin-top: 40px;
+}
+
+.sfilate-text {
+    max-width: 50%;  /* Limita la larghezza del testo */
+    font-size: 1.2rem;
+    padding-left: 20px;
+    text-align: justify;  /* Allinea il testo in modo giustificato */
+}
+
+.sfilate-container img {
+    max-width: 45%;  /* Imposta la larghezza massima per l'immagine */
+    height: auto;
+    border-radius: 10px;  /* Aggiunge angoli arrotondati per l'immagine */
+}
+/* Flexbox per l'affiancamento immagine e testo */
+.panoramica-container {
+    display: flex;  /* Usa Flexbox per disporre immagine e testo orizzontalmente */
+    justify-content: space-between;  /* Distanza tra il testo e l'immagine */
+    align-items: center;  /* Allinea verticalmente il testo e l'immagine */
+    margin-top: 40px;
+}
+
+.panoramica-text {
+    max-width: 50%;  /* Limita la larghezza del testo */
+    font-size: 1.2rem;
+    padding-right: 20px;  /* Aggiunge un po' di spazio tra il testo e l'immagine */
+    text-align: justify;  /* Allinea il testo in modo giustificato */
+}
+
+.panoramica-container img {
+    max-width: 45%;  /* Imposta la larghezza massima per l'immagine */
+    height: auto;
+    border-radius: 10px;  /* Aggiunge angoli arrotondati per l'immagine */
+}
+
+/* Impostazioni generali per la pagina Servizi */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Sezione dei Servizi con scorrimento orizzontale */
+#servizi {
+    padding: 40px 20px;
+    background-color: #fff;
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.servizi-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px;
+    animation: scorrimento 30s linear infinite;
+}
+
+.servizio {
+    width: 250px;
+    margin: 0 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.servizio:hover {
+    transform: scale(1.05);
+}
+
+.servizio img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    height: auto;
+}
+
+.servizio p {
+    margin: 10px;
+    font-size: 1.2rem;
+}
+@media (max-width: 768px) {
+  .sfilate-container,
+  .panoramica-container {
+    flex-direction: column;
+  }
+
+  .sfilate-text,
+  .panoramica-text {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .sfilate-container img,
+  .panoramica-container img {
+    max-width: 100%;
+  }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+

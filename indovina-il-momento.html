@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indovina il momento!</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+	 <link rel="stylesheet" href="styles.css">
+        body {
+            background-image: url("sfondo.jpg"); /* usa lo stesso sfondo della home */
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            color: #fff;
+        }
+
+        .search-bar {
+            margin-top: 10px;
+        }
+
+        .search-bar input[type="text"] {
+            padding: 5px;
+            width: 200px;
+        }
+
+        .servizi-container {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: 30px auto;
+            text-align: center;
+        }
+
+        form input, form button {
+            margin-top: 10px;
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Indovina il momento!</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="frasi-cheese.html">Frasi Cheese!</a></li>
+                <li><a href="sorrisi-ricevuti.html">Sorrisi ricevuti</a></li>
+            </ul>
+        </nav>
+        
+       
+    </header>
+
+    <section>
+        <div class="servizi-container">
+            <main>
+                <h2>Indovina la scena!</h2>
+                <p>Guarda attentamente questa foto e prova a indovinare di che momento si tratta.</p>
+
+                <img src="images/sfilata.jpg" alt="Scena misteriosa" width="300">
+
+                <!-- Simuliamo il quiz: porta a pagina 'bravo.html' -->
+                <form action="bravo.html" method="get">
+                    <label for="guesses">La scena si svolge a:</label><br>
+                    <input type="text" id="guesses" name="guesses" required><br>
+                    <button type="submit">Indovina!</button>
+                </form>
+
+            </main>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Obiettivo: sorriso! | Crevalcore, Bologna</p>
+        <p>Telefono: +39 339 411 2687</p>
+    </footer>
+</body>
+</html>
